@@ -25,9 +25,10 @@ h1{
 .container{
     display: flex;
     border: 1px solid red;
-    width: 100%;
+    width: 100%; /* set to 100% to help center-align the content inside this container*/
     height: 900px;
-    justify-content: center;
+    justify-content: center; /* make the .inside container horizontally align*/
+    align-items: center; /*make the .inside container vertically align*/
 }
 
 /* created another container(.inside) to center content */
@@ -40,8 +41,10 @@ h1{
 
 /* class for row to divide by rows */
 .row {
-    display: flex;
-    width: 100%;
+    display: flex; /* make the content inside .row flex*/
+    /* width: 100%; */
+    justify-content: center; /* aligns the .squares div center*/
+    
     border: 1px solid blue;
 }
 

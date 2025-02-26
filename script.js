@@ -1,7 +1,7 @@
 let init = 'Hello World';
 console.log(init);
 
-let numberOfSquares = 70;
+let numberOfSquares = 20;
 let container = document.querySelector(".inside");
 
 // for (let i = 0; i < numberOfSquares; i++){
