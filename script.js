@@ -2,22 +2,18 @@ let init = 'Hello World';
 console.log(init);
 
 let numberOfSquares = 30;
-let container = document.querySelector(".inside");
 let setupButton = document.querySelector("button");
 
 setupButton.addEventListener("click", setupGrid);
 
-function setupGrid(){
-   let input =  askUserInput();
-   console.log(input);
-}
 
 function askUserInput(){
     return prompt("Grid Size"); 
 }
 
-
+// 
 function createGrid(numberOfSquares){
+    let container = document.querySelector(".inside");
     for (let i = 0; i < numberOfSquares; i++){
         let newRow = document.createElement("div")
         newRow.classList.add("row");
@@ -31,3 +27,21 @@ function createGrid(numberOfSquares){
     }
 }
 
+// function to remove currentGrid, via removing child of a the container, then creating another one.
+function refreshGrid(){
+    let parentOfCurrentGrid = document.querySelector(".container")
+    let currentGrid = parentOfCurrentGrid.firstElementChild;
+    let newGrid = document.createElement("div");
+    newGrid.classList.add('inside');
+
+    parentOfCurrentGrid.removeChild(currentGrid);
+    parentOfCurrentGrid.appendChild(newGrid);
+}
+
+
+function setupGrid(){
+    let input =  askUserInput();
+    console.log(input);
+    refreshGrid();
+    createGrid(input);
+ }
