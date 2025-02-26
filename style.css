@@ -53,3 +53,7 @@ h1{
     width: 15px;
     height: 15px;
 }
+
+.hovered{
+    background-color: aqua;;
+}

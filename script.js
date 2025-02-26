@@ -46,6 +46,7 @@ function onHover(e){
     console.log("target is:")
     console.log(e.target);
     console.log(e);
+    e.target.classList.add("hovered");
 }
 
 // function to remove currentGrid, via removing child of a the container, then creating another one.
