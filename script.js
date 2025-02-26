@@ -3,16 +3,18 @@ console.log(init);
 
 let numberOfSquares = 30;
 let container = document.querySelector(".inside");
+let setupButton = document.querySelector("button");
 
-// for (let i = 0; i < numberOfSquares; i++){
-//     console.log(`squares: ${numberOfSquares}`);
-//     let newSquare = document.createElement('div');
-//     newSquare.classList.add("square");
-//     container.appendChild(newSquare);
-//  }
+setupButton.addEventListener("click", setupGrid);
 
-// logic for creating grid based on input (numberOfSquares)
+function setupGrid(){
+   let input =  askUserInput();
+   console.log(input);
+}
 
+function askUserInput(){
+    return prompt("Grid Size"); 
+}
 
 
 function createGrid(numberOfSquares){
