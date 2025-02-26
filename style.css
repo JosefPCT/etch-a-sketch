@@ -32,14 +32,21 @@ h1{
 
 /* created another container(.inside) to center content */
 .inside{
-    display: flex;
+    
     width: 960px;
     border: 1px solid green;
-    justify-content: space-evenly;
+    
+}
+
+/* class for row to divide by rows */
+.row {
+    display: flex;
+    width: 100%;
+    border: 1px solid blue;
 }
 
 .square{
     border: 1px solid red;
-    width: 15px;
-    height: 15px;
+    width: 6px;
+    height: 6px;
 }
