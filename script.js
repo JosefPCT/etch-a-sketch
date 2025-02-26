@@ -25,6 +25,27 @@ function createGrid(numberOfSquares){
             newRow.appendChild(newSquare);
         }
     }
+    setSquareListeners();
+}
+
+function setSquareListeners(){
+    console.log("setting listeners...");
+    // let inside = document.querySelector(".inside");
+    // inside.addEventListener('mouseenter', onHover);
+
+    let squares = document.querySelectorAll(".square"); //will return a nodelist, so you can use forEach
+    console.log(squares);
+    squares.forEach((square) => {
+        console.log(square);
+        square.addEventListener('mouseenter', onHover);
+    })
+}
+
+function onHover(e){
+    console.log("hovering...");
+    console.log("target is:")
+    console.log(e.target);
+    console.log(e);
 }
 
 // function to remove currentGrid, via removing child of a the container, then creating another one.
