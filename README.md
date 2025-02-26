@@ -17,3 +17,4 @@ DETERMINE logic for hovering
   	IDEA: math.random
   IMPLEMENT progressive darkening effect, each interaction by 10%
    IDEA: DECREMENT opaque value by 0.1
+  IMPLEMENT logic IF input is > 50, make the .square width and length smaller
